@@ -12,7 +12,7 @@ function App() {
     console.log("darkMNode initially in App.jsx: ",darkMode," ");
 
   return (
-      <div className={`${darkMode ? "common-bg" : "bg-white"} ${darkMode ? "text-white" : "text-black"} `}>
+      <div className={`max-w-screen overflow-x-hidden ${darkMode ? "common-bg" : "bg-white"} ${darkMode ? "text-white" : "text-black"} `}>
          <Router>
              <Routes>
                 <Route path="/" element={<Home/>}/>
