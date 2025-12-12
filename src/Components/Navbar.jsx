@@ -130,7 +130,7 @@ const Navbar = () => {
                     </button>
                 </div>
                 <div className={`aside ${darkMode ? "text-white border-l-2 border-l-white": "text-black border-l-2 border-l-black"}`} >
-                    <div className="close " ref={closeRef}> <IoClose className="close-i cursor-pointer h-6 w-6" /></div>
+                    <div className="close "  <IoClose ref={closeRef}> className="close-i cursor-pointer h-6 w-6" /></div>
                     <button onClick={()=>{handleSideLinkClick("home")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Home</button>
                     <button onClick={()=>{handleSideLinkClick("about")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">About Me</button>
                     <button onClick={()=>{handleSideLinkClick("skills")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Skills</button>
