@@ -18,7 +18,6 @@ const Hero = () => {
 
 
     const handleScrollToSection = (sectionId) => {
-        // already in home page,just need to scroll
         scrollToSection(sectionId);
     };
 

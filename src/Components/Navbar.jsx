@@ -27,7 +27,6 @@ const Navbar = () => {
 
 
     const handleScrollToSection = (sectionId) => {
-        // already in home page,just need to scroll
         scrollToSection(sectionId);
     };
 
@@ -97,9 +96,6 @@ const Navbar = () => {
 
     return (
         <>
-            {/*<div  className={`main-nav w-[100dvw] sticky flex top-0  justify-between  items-center  h-[10dvh] px-5  z-50 ${darkMode ? "bg-zinc-950": "bg-white"}`}>*/}
-
-
             <div  className={`main-nav w-[100dvw] sticky flex top-0  justify-between  items-center  h-[10dvh] px-5  z-50 backdrop-filter backdrop-blur-[17px]`}>
                 {/*<div className="logo text-xl font-bold text-indigo-400 ">SMN</div>*/}
                 <div className="logo text-xl font-bold bg-gradient-to-br from-indigo-500  to-indigo-800 bg-clip-text text-transparent ">SMN</div>
@@ -143,10 +139,6 @@ const Navbar = () => {
                         </button>
                     </a>
                     <button className="aside-modeBtn sidebar linkEffect1  linkEffect--rightToLeft1" onClick={()=>{setDarkMode(!darkMode)}}>
-                    {/*<div className="nav-comp mode-btn max-h-fit max-w-fit p-3 cursor-pointer rounded-lg border-[1px] border-slate-700">*/}
-                    {/*    <MdOutlineDarkMode className="h-5 w-5"/>*/}
-                    {/*</div>*/}
-
                         <div   className="nav-comp  p-2 py-2 min-w-fit w-[100px] simple-center cursor-pointer rounded-lg border-[1px] border-slate-700">
                             <MdOutlineDarkMode className={`h-5 w-5 ${darkMode ? "hidden": "block"}`} />
                             <BsBrightnessHigh className={`h-5 w-5 ${darkMode ? "block": "hidden"}`}/>

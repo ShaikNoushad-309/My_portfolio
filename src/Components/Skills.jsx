@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaJsSquare } from "react-icons/fa";
 import { SiSocketdotio } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
@@ -45,15 +44,6 @@ const Skills = () => {
                 <span className="box">Skills</span>
             </div>
             <div className=" boxes-container  container gap-7 h-[80%] w-[80%] flex  flex-wrap justify-center items-center   ">
-               {/*<div className="box text-lg border-l-blue-600 border-r-blue-600  border-4 w-auto h-auto p-3 flex flex-col gap-2 justify-center items-center">*/}
-
-               {/*<div className="box text-lg flex flex-col gap-2 justify-center items-center">*/}
-               {/*    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">*/}
-               {/*    <FaJsSquare className="h-20 w-20 md:hover:scale-110 cursor-pointer bg-white text-yellow-500"/>*/}
-               {/*    </a>*/}
-               {/*    Javascript*/}
-               {/*</div>*/}
-
                 <div className="box text-lg flex flex-col gap-2 justify-center items-center">
                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
                         <img alt="js" loading="lazy"
@@ -79,7 +69,7 @@ const Skills = () => {
                     <a href="https://expressjs.com/" target="_blank">
                         <SiExpress className="h-20 w-20 md:hover:scale-110   cursor-pointer"/>
                     </a>
-                    Expresss.js
+                    Express.js
                 </div>
                 <div className="box text-lg flex flex-col gap-2 justify-center items-center">
                     <a href="https://www.mongodb.com/" target="_blank">
@@ -125,9 +115,6 @@ const Skills = () => {
                         <a href="https://gsap.com/" target="_blank">
                             <img alt="gsap" loading="lazy"
                                  className="transition-transform   rounded-lg duration-300 md:hover:scale-110 h-20 w-20"
-                                 // src="https://external-content.duckduckgo.com/ip3/gsap.com.ico"/>
-
-                                 // src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.hP0q4TFRSERfy4MzjviQNQHaHa%3Fpid%3DApi%26ucfimg%3D1&f=1&ipt=58cadb84be55b868f514c9021271fe8116e2d69d134c18ba4304d3793380db36"/>
                                  src="/assets/gsap_logo.png"/>
                         </a>
                     GSAP

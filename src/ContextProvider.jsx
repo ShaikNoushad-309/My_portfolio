@@ -1,8 +1,6 @@
 import React, { useState} from 'react';
 import {AppContext} from "./Context.jsx";
 
-// export const AppContext = createContext({});
-
 const ContextProvider = (props) => {
 
     const [darkMode, setDarkMode] = useState(true);
