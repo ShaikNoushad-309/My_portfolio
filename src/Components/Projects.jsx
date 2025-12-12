@@ -83,7 +83,7 @@ const Projects = () => {
     const projects = [{
         id:1,
         title:"Recurring Date Picker",
-        img:"/src/assets/recc_date_picker.png",
+        img:"/assets/recc_date_picker.png",
         desc:"A customizable React component for scheduling repeating events and tasks with flexible recurrence rules (daily, weekly, monthly, custom).",
         techStack:["React","Next.js","mongoDB","mongoose","jwt","Tailwind CSS","Next.js","Rest API"],
         vc_link:"https://github.com/ShaikNoushad-309/Recurring-Date-Picker"
@@ -91,7 +91,7 @@ const Projects = () => {
         {
             id:2,
             title:"Web Password Manager",
-            img:"/src/assets/pass_man_2.png",
+            img:"/assets/pass_man_2.png",
             desc:" Perform all CRUD operations—add, view, edit, and delete entries containing URLs, usernames, and encrypted passwords within a clean, responsive interface.",
             techStack:["React","Node.js","Express.js","MongoDB","Mongoose","Tailwind CSS","Rest API"],
             vc_link:"https://github.com/ShaikNoushad-309/Password-Manager"
@@ -99,21 +99,21 @@ const Projects = () => {
         {
             id:3,
             title:"iPhone Webpage Clone",
-            img:"/src/assets/iPhone_pic.png",
+            img:"/assets/iPhone_pic.png",
             desc:"Built using Three.js for the 3D model rendering and GSAP for fluid, timeline-based animations to replicate Apple’s signature aesthetic.",
             techStack:["React","Three.js","GSAP","Tailwind CSS"],
             vc_link:"https://github.com/ShaikNoushad-309/iPhone-Web"
         }, {
             id:4,
             title:"Basic Todo List",
-            img:"/src/assets/todo.png",
+            img:"/assets/todo.png",
             desc:"A lightweight web app for daily task management. Create, view, edit, and delete tasks with an intuitive interface. Built for simplicity and focus.",
             techStack:["HTML","CSS","Javascript"],
             vc_link:"https://github.com/ShaikNoushad-309/Basic-Todo-Web-App"
         }, {
             id:5,
             title:"Twitter UI Clone",
-            img:"/src/assets/twitter_clone.png",
+            img:"/assets/twitter_clone.png",
             desc:"A pixel-perfect, responsive clone of Twitter’s main interface built purely with HTML and CSS. ",
             techStack:["HTML","CSS","Javascript"],
             vc_link:"https://github.com/ShaikNoushad-309/Twitter-Clone"
