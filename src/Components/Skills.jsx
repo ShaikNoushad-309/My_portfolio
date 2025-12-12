@@ -58,7 +58,7 @@ const Skills = () => {
                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
                         <img alt="js" loading="lazy"
                              className="rounded-lg  transition-transform duration-300 md:hover:scale-110 h-20 w-20 "
-                             src="/src/assets/js_logo.png"/>
+                             src="/assets/js_logo.png"/>
                     </a>
                     Javascript
                 </div>
@@ -128,7 +128,7 @@ const Skills = () => {
                                  // src="https://external-content.duckduckgo.com/ip3/gsap.com.ico"/>
 
                                  // src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.hP0q4TFRSERfy4MzjviQNQHaHa%3Fpid%3DApi%26ucfimg%3D1&f=1&ipt=58cadb84be55b868f514c9021271fe8116e2d69d134c18ba4304d3793380db36"/>
-                                 src="/src/assets/gsap_logo.png"/>
+                                 src="/assets/gsap_logo.png"/>
                         </a>
                     GSAP
                 </div>

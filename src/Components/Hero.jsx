@@ -78,7 +78,7 @@ const Hero = () => {
                     <div className="myPic  min-w-fit min-h-fit  simple-center  z-10 ">
                         {/*<img src="/src/assets/IMG_20251128_123625-removebg-preview.png" alt="myPic" className="z-0 bg-cover bg-center bg-transparent h-full w-full rounded-full"/>*/}
                         <div className="main-hero-img z-0 bg-cover bg-center border-5 border-[#615fff]">
-                            <img src="/src/assets/Noushad_img3.jpg" alt="my-pic" className="z-0 bg-contain bg-center  h-full w-full rounded-full"/>
+                            <img src="/assets/Noushad_img3.jpg" alt="my-pic" className="z-0 bg-contain bg-center  h-full w-full rounded-full"/>
                         </div>
                     </div>
 

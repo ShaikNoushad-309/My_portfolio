@@ -114,7 +114,7 @@ const About = () => {
                 <div className="myAboutPic about-comp md:block  hidden h-[80%] min-w-[260px] min-h-[250px] sm:w-[42%]  md:w-[52%]  lg:w-[58%] mt-10  z-10 ">
                     {/*<img src="/src/assets/IMG_20251128_123625-removebg-preview.png" alt="myPic" className="z-0 bg-cover bg-center bg-transparent h-full w-full rounded-full"/>*/}
                     <div className="hero-img z-0 bg-cover bg-center bg-black border-5  h-full w-full rounded-bl-full">
-                        <img src="/src/assets/temp3.jpg" alt="myPic" className="rounded-bl-full bg-center opacity-100 h-full w-full"/>
+                        <img src="/assets/temp3.jpg" alt="myPic" className="rounded-bl-full bg-center opacity-100 h-full w-full"/>
                     </div>
                 </div>
             </div>

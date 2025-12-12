@@ -116,7 +116,7 @@ const Navbar = () => {
                     {/*<button className="bg-[#de7595] text-black p-1.5 rounded-lg font-semibold">Download CV</button>*/}
 
 
-                    <a href="src/assets/Shaik_Mohammed_Noushad_Resume.pdf" download>
+                    <a href="/public/assets/Shaik_Mohammed_Noushad_Resume.pdf" download>
                         <button
                             className="nav-comp bg-indigo-500 text-black p-1.5 px-2 min-w-fit text-sm flex flex-wrap md:rounded-lg md:font-semibold cursor-pointer">Download
                             CV
@@ -136,7 +136,7 @@ const Navbar = () => {
                     <button onClick={()=>{handleSideLinkClick("skills")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Skills</button>
                     <button onClick={()=>{handleSideLinkClick("projects")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Projects</button>
                     <button onClick={()=>{handleSideLinkClick("contact")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Contact Me</button>
-                    <a href="src/assets/Shaik_Mohammed_Noushad_Resume.pdf" className="aside-cvBtn sidebar linkEffect1  linkEffect--rightToLeft1" download>
+                    <a href="/public/assets/Shaik_Mohammed_Noushad_Resume.pdf" className="aside-cvBtn sidebar linkEffect1  linkEffect--rightToLeft1" download>
                         <button
                             className="nav-comp bg-indigo-500 text-black p-1.5 px-2 min-w-fit text-sm flex flex-wrap rounded-lg cursor-pointer">Download
                             CV
