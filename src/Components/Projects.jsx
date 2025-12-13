@@ -64,7 +64,7 @@ const Projects = () => {
                 scrub:1,
                 pin:true,
                 snap: 1 / (sections.length - 1),
-                end: () => "+=" + document.querySelector(".projects-scroll-container").offsetWidth,
+                end: () => "+=" + document.querySelector(".projects-scroll-container").offsetWidth + "+100",
             }
         })
     },[]);
