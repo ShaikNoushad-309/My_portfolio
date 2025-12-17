@@ -67,7 +67,7 @@ body{
     width: 40%;
     backdrop-filter: blur(17px);
     position: absolute;
-    opacity: 20;
+    opacity: 10;
     top: 0;
     right: -55%;
     /*display: block;*/

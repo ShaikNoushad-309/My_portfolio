@@ -1,4 +1,4 @@
-import React, { useRef,useContext} from 'react';
+import React, {useRef, useContext, useState} from 'react';
 import { MdOutlineDarkMode } from "react-icons/md";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
@@ -15,6 +15,7 @@ const Navbar = () => {
     const menuRef = useRef(null);
     const closeRef = useRef(null);
     const {darkMode,setDarkMode} = useContext(AppContext);
+    const [toggleSidebar, setToggleSidebar] = useState(false);
 
     console.log("darkMNode initially in Navbar: ",darkMode," ");
 
@@ -47,6 +48,8 @@ const Navbar = () => {
     useGSAP((context, contextSafe) => {
 
         const handleMenuClick = contextSafe(() => {
+            setToggleSidebar(true);
+
             gsap.to(".aside", {
                 right: 0,
                 duration: 1.2,
@@ -55,6 +58,7 @@ const Navbar = () => {
         });
 
         const handleCloseClick = contextSafe(() => {
+            setToggleSidebar(false);
             gsap.to(".aside", {
                 right:"-55%",
                 duration: 1.3,
@@ -100,7 +104,7 @@ const Navbar = () => {
                 {/*<div className="logo text-xl font-bold text-indigo-400 ">SMN</div>*/}
                 <div className="logo text-xl font-bold bg-gradient-to-br from-indigo-500  to-indigo-600 bg-clip-text text-transparent ">SMN</div>
 
-                <TiThMenu className="visible md:hidden h-6 w-6 cursor-pointer" ref={menuRef} />
+                <TiThMenu className="visible md:hidden h-6 w-6 cursor-pointer" ref={menuRef}  />
 
                 <div
                     className="nav-links xl:[25%] w-[60%]  hidden md:flex items-center justify-evenly  px-1 gap-5 xl:gap-0  mx-3 min-h-fit min-w-fit font-medium lg:mx-5 xl:mx-10">
@@ -126,7 +130,7 @@ const Navbar = () => {
                         <BsBrightnessHigh className={`h-5 w-5 ${darkMode ? "block": "hidden"}`}/>
                     </button>
                 </div>
-                <div className={`aside ${darkMode ? "text-white border-l-2 border-l-white": "text-black border-l-2 border-l-black"}`} >
+                <div className={`aside ${toggleSidebar ? "block":"hidden"} ${darkMode ? "text-white border-l-2 border-l-white": "text-black border-l-2 border-l-black"}`} >
                     <div className="close ">  <IoClose ref={closeRef} className="close-i cursor-pointer h-6 w-6" /></div>
                     <button onClick={()=>{handleSideLinkClick("home")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Home</button>
                     <button onClick={()=>{handleSideLinkClick("about")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">About Me</button>
