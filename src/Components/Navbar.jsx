@@ -96,7 +96,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div  className={`main-nav w-[100dvw] sticky flex top-0 justify-between  items-center  h-[10dvh] px-5  z-50 backdrop-filter backdrop-blur-[17px]`}>
+            <div  className={`main-nav w-[100dvw] sticky flex top-0 justify-between  items-center  h-[10dvh] px-5  z-50 backdrop-filter backdrop-blur-[17px] overflow-x-hidden`}>
                 {/*<div className="logo text-xl font-bold text-indigo-400 ">SMN</div>*/}
                 <div className="logo text-xl font-bold bg-gradient-to-br from-indigo-500  to-indigo-600 bg-clip-text text-transparent ">SMN</div>
 

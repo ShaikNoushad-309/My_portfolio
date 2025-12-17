@@ -58,7 +58,7 @@ const Education = () => {
             institution: "G. Pullaiah College of Engineering & Technology",
             status: "Ongoing",
             year: "2023 - 2027",
-            cgpa: "CGPA: 8.2/10",
+            cgpa: "CGPA: 8.2/10 (till 5th Sem)",
             description: "Specializing in Full Stack Development"
         },
         {
