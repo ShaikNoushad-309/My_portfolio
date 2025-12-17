@@ -38,8 +38,8 @@ const Skills = () => {
 
 
     return (
-        <div id="skills" className=" mx-auto  h-auto min-h-screen w-screen flex flex-col pt-0 sm:pt-[15dvh]  items-center gap-7 sm:gap-0 md:gap-0 z-10">
-            <div className=" text-5xl xl:text-6xl  font-bold block space-x-4">
+        <div id="skills" className="mx-auto  h-auto min-h-screen w-screen flex flex-col pt-0 sm:pt-[15dvh]  items-center gap-7 sm:gap-0 md:gap-0 z-10">
+            <div className=" text-5xl mt-[10dvh] sm:mt-0 xl:text-6xl  font-bold block space-x-4">
                 <span className="box">My</span>
                 <span className="box">Skills</span>
             </div>

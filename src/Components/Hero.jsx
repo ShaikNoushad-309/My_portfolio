@@ -48,7 +48,7 @@ const Hero = () => {
             <div id="home" className="main-hero w-screen h-[90dvh]  flex  md:flex-row md:flex-wrap flex-col-reverse justify-center md:justify-center items-center md:items-center p-0  md:p-3 max-w-screen z-10 border-[2px solid blue]">
                 <div className="hero-part1 z-10   w-full md:w-[50%] max-h-fit h-[45%] md:h-[80%] px-3  flex flex-col justify-center gap-3 sm:gap-6  ">
                     <span className="text-lg">Hi I'm</span>
-                    <div className="hero-text-comp hero-text w-full font-semibold text-4xl bg-gradient-to-br from-indigo-500  to-indigo-800 bg-clip-text text-transparent ">
+                    <div className="hero-text-comp hero-text w-full font-semibold text-4xl bg-gradient-to-br from-indigo-500  to-indigo-600 bg-clip-text text-transparent ">
                         Shaik Mohammed Noushad
                     </div>
                     <div className="hero-text-comp md:text-5xl xl:text-6xl  font-bold hidden md:block">

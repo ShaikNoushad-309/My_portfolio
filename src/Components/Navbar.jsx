@@ -96,9 +96,9 @@ const Navbar = () => {
 
     return (
         <>
-            <div  className={`main-nav w-[100dvw] sticky flex top-0  justify-between  items-center  h-[10dvh] px-5  z-50 backdrop-filter backdrop-blur-[17px]`}>
+            <div  className={`main-nav w-[100dvw] sticky flex top-0 justify-between  items-center  h-[10dvh] px-5  z-50 backdrop-filter backdrop-blur-[17px]`}>
                 {/*<div className="logo text-xl font-bold text-indigo-400 ">SMN</div>*/}
-                <div className="logo text-xl font-bold bg-gradient-to-br from-indigo-500  to-indigo-800 bg-clip-text text-transparent ">SMN</div>
+                <div className="logo text-xl font-bold bg-gradient-to-br from-indigo-500  to-indigo-600 bg-clip-text text-transparent ">SMN</div>
 
                 <TiThMenu className="visible md:hidden h-6 w-6 cursor-pointer" ref={menuRef} />
 
@@ -106,6 +106,7 @@ const Navbar = () => {
                     className="nav-links xl:[25%] w-[60%]  hidden md:flex items-center justify-evenly  px-1 gap-5 xl:gap-0  mx-3 min-h-fit min-w-fit font-medium lg:mx-5 xl:mx-10">
                     <button  onClick={()=>{handleScrollToSection("home")}} className="nav-comp linkEffect  linkEffect--rightToLeft ">Home</button>
                     <button  onClick={()=>{handleScrollToSection("about")}} className="nav-comp linkEffect  linkEffect--rightToLeft">About Me</button>
+                    <button  onClick={()=>{handleScrollToSection("education")}} className="nav-comp linkEffect  linkEffect--rightToLeft">Education</button>
                     <button  onClick={()=>{handleScrollToSection("skills")}} className="nav-comp linkEffect  linkEffect--rightToLeft">Skills</button>
                     <button onClick={()=>{handleScrollToSection("projects")}}  className="nav-comp linkEffect  linkEffect--rightToLeft">Projects</button>
                     <button  onClick={()=>{handleScrollToSection("contact")}} className="nav-comp linkEffect  linkEffect--rightToLeft">Contact Me</button>
@@ -129,6 +130,7 @@ const Navbar = () => {
                     <div className="close ">  <IoClose ref={closeRef} className="close-i cursor-pointer h-6 w-6" /></div>
                     <button onClick={()=>{handleSideLinkClick("home")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Home</button>
                     <button onClick={()=>{handleSideLinkClick("about")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">About Me</button>
+                    <button onClick={()=>{handleSideLinkClick("education")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Education</button>
                     <button onClick={()=>{handleSideLinkClick("skills")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Skills</button>
                     <button onClick={()=>{handleSideLinkClick("projects")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Projects</button>
                     <button onClick={()=>{handleSideLinkClick("contact")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Contact Me</button>

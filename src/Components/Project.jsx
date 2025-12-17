@@ -18,7 +18,7 @@ const Project = (props) => {
                         <span key={index} className="h-fit w-fit py-1 px-2 sm:px-3 text-sm rounded-md bg-[#293556]">{tech}</span>
                     ))}
                 </div>
-                <a href={myProject.vc_link} target="_blank" className="sm:px-3 sm:py-2 px-2 py-1 bg-indigo-500 text-black text-lg font-medium rounded-sm flex gap-3 justify-center items-center">View Code</a>
+                <a href={myProject.vc_link} target="_blank" className="sm:px-3 sm:py-2 px-2 py-1 bg-indigo-500 text-black text-lg font-semibold rounded-sm flex gap-3 justify-center items-center">View Code</a>
             </div>
         </>
     );

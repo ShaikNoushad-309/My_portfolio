@@ -6,18 +6,22 @@ import Contact from "./Contact.jsx";
 import Navbar from "./Navbar.jsx";
 import Hero from "./Hero.jsx";
 import Footer from "./Footer.jsx";
+import Education from "./Education.jsx";
 
 const Home = () => {
 
     return (
         <>
          <Navbar/>
-         <Hero/>
-         <About/>
-         <Skills/>
-         <Projects/>
-         <Contact />
-         <Footer/>
+            <div className="overflow-x-hidden">
+               <Hero/>
+               <About/>
+                <Education/>
+               <Skills/>
+               <Projects/>
+               <Contact />
+               <Footer/>
+            </div>
         </>
     );
 };

@@ -26,12 +26,12 @@ const Contact1 = () => {
                     shaiknoushad1024@gmail.com
                     <BiCopy onClick={()=>(handleCopy(items[0]))} className="cursor-pointer h-5 w-5 sm:h-8  sm:w-8 text-xl " />
                 </div>
-                <div className="phone-no  h-fit w-fit underline simple-center gap-3 text-xl">
-                    <BsTelephone    className="info-before h-5 w-5 sm:h-8  sm:w-8  " />
-                    +91 6304991905
-                    <BiCopy onClick={()=>(handleCopy(items[1]))} className="cursor-pointer h-5 w-5 sm:h-8  sm:w-8 text-xl " />
-                </div>
-                <div className="address  h-fit w-fit underline simple-center gap-3 text-xl">
+                {/*<div className="phone-no  h-fit w-fit underline simple-center gap-3 text-[0.5em] sm:text-xl">*/}
+                {/*    <BsTelephone    className="info-before h-5 w-5 sm:h-8  sm:w-8  " />*/}
+                {/*    +91 6304991905*/}
+                {/*    <BiCopy onClick={()=>(handleCopy(items[1]))} className="cursor-pointer h-5 w-5 sm:h-8  sm:w-8 text-xl " />*/}
+                {/*</div>*/}
+                <div className="address  h-fit w-fit underline simple-center gap-3 text-[0.5em] sm:text-xl">
                     <IoLocationOutline   className="info-before h-5 w-5 sm:h-8  sm:w-8  " />
                      Kurnool,AP
                     <BiCopy onClick={()=>(handleCopy(items[2]))} className="cursor-pointer h-5 w-5 sm:h-8  sm:w-8 text-xl " />
