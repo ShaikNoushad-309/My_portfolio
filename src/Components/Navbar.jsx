@@ -63,7 +63,7 @@ const Navbar = () => {
                 duration: 1.3,
                 ease: "power3.out"
             });
-            setTimeout(()=>{setToggleSidebar(false)},3000);
+            setTimeout(()=>{setToggleSidebar(false)},1400);
         });
 
         // Close sidebar immediately when screen size increases
