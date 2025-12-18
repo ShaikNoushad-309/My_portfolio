@@ -1,4 +1,4 @@
-import React, {useRef, useContext, useState} from 'react';
+import React, {useRef, useContext} from 'react';
 import { MdOutlineDarkMode } from "react-icons/md";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
@@ -15,7 +15,7 @@ const Navbar = () => {
     const menuRef = useRef(null);
     const closeRef = useRef(null);
     const {darkMode,setDarkMode} = useContext(AppContext);
-    const [toggleSidebar, setToggleSidebar] = useState(false);
+    // const [toggleSidebar, setToggleSidebar] = useState(false);
 
     console.log("darkMNode initially in Navbar: ",darkMode," ");
 
@@ -48,7 +48,7 @@ const Navbar = () => {
     useGSAP((context, contextSafe) => {
 
         const handleMenuClick = contextSafe(() => {
-            setToggleSidebar(true);
+            // setToggleSidebar(true);
 
             gsap.to(".aside", {
                 right: 0,
@@ -63,7 +63,7 @@ const Navbar = () => {
                 duration: 1.3,
                 ease: "power3.out"
             });
-            setTimeout(()=>{setToggleSidebar(false)},1400);
+            // setTimeout(()=>{setToggleSidebar(false)},1400);
         });
 
         // Close sidebar immediately when screen size increases
@@ -94,13 +94,12 @@ const Navbar = () => {
             ease: "power3.out"
         });
         handleScrollToSection(comp);
-
     });
 
 
     return (
         <>
-            <div  className={`main-nav max-w-screen w-[100dvw] sticky flex top-0 justify-between  items-center  h-[10dvh] px-5  z-50 backdrop-filter backdrop-blur-[17px] ${toggleSidebar ? "overflow-visible":"overflow-x-hidden"} `}>
+            <div  className={`main-nav  w-full sticky flex top-0 justify-between  items-center  h-[10dvh] px-5  z-50 backdrop-filter backdrop-blur-[17px] `}>
                 {/*<div className="logo text-xl font-bold text-indigo-400 ">SMN</div>*/}
                 <div className="logo text-xl font-bold bg-gradient-to-br from-indigo-500  to-indigo-600 bg-clip-text text-transparent ">SMN</div>
 
@@ -158,3 +157,169 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// import React, {useRef, useContext, useState} from 'react';
+// import { MdOutlineDarkMode } from "react-icons/md";
+// import gsap from "gsap";
+// import {useGSAP} from "@gsap/react";
+// import { TiThMenu } from "react-icons/ti";
+// import { IoClose } from "react-icons/io5";
+// import {AppContext} from "../Context.jsx";
+// import { BsBrightnessHigh } from "react-icons/bs";
+
+
+
+// const Navbar = () => {
+//
+//     const menuRef = useRef(null);
+//     const closeRef = useRef(null);
+//     const {darkMode,setDarkMode} = useContext(AppContext);
+//     const [toggleSidebar, setToggleSidebar] = useState(false); // KEEP THIS!
+//
+//     const scrollToSection = (sectionId) => {
+//         const element = document.getElementById(sectionId);
+//         if(element){
+//             element.scrollIntoView({behavior: "smooth",block:"start"});
+//         }
+//     };
+//
+//     const handleScrollToSection = (sectionId) => {
+//         scrollToSection(sectionId);
+//     };
+//
+//     // GSAP animation for initial navbar load
+//     useGSAP(()=>{
+//         const gsapTimeline = gsap.timeline();
+//         gsapTimeline.from(".nav-comp",{
+//             duration:1,
+//             y:20,
+//             ease:"easeInOutExpo",
+//             opacity:0,
+//             stagger:0.2
+//         });
+//     });
+//
+//     // GSAP animation for sidebar
+//     useGSAP((context, contextSafe) => {
+//         const handleMenuClick = contextSafe(() => {
+//             setToggleSidebar(true);
+//
+//             // Ensure sidebar is rendered before animation
+//             setTimeout(() => {
+//                 gsap.to(".aside", {
+//                     right: 0,
+//                     duration: 1.2,
+//                     ease: "power3.out"
+//                 });
+//             }, 10);
+//         });
+//
+//         const handleCloseClick = contextSafe(() => {
+//             gsap.to(".aside", {
+//                 right:"-100%",
+//                 duration: 1.3,
+//                 ease: "power3.out"
+//             });
+//             setTimeout(()=>{
+//                 setToggleSidebar(false);
+//             },1300);
+//         });
+//
+//         const handleResize = contextSafe(() => {
+//             if (window.innerWidth >= 768 && toggleSidebar) {
+//                 gsap.set(".aside", { right: "-100%" });
+//                 setToggleSidebar(false);
+//             }
+//         });
+//
+//         menuRef.current?.addEventListener("click", handleMenuClick);
+//         closeRef.current?.addEventListener("click", handleCloseClick);
+//         window.addEventListener("resize", handleResize);
+//
+//         return () => {
+//             menuRef.current?.removeEventListener("click", handleMenuClick);
+//             closeRef.current?.removeEventListener("click", handleCloseClick);
+//             window.removeEventListener("resize", handleResize);
+//         };
+//     }, [toggleSidebar]); // Add toggleSidebar to dependency array
+//
+//     const {contextSafe} = useGSAP();
+//
+//     const handleSideLinkClick = contextSafe((sectionId) => {
+//         gsap.to(".aside", {
+//             right:"-100%",
+//             duration: 1.3,
+//             ease: "power3.out"
+//         });
+//         setTimeout(() => {
+//             setToggleSidebar(false);
+//             handleScrollToSection(sectionId);
+//         }, 1300);
+//     });
+//
+//     return (
+//         <>
+//             <div className="nav-wrapper max-w-[100dvw] w-[100dvw] sticky top-0 left-0 z-50 overflow-x-hidden">
+//                 <div  className={`main-nav w-[100dvw] sticky top-0 flex justify-between items-center h-[10dvh] px-5 z-50 backdrop-filter backdrop-blur-[17px] overflow-x-hidden ${toggleSidebar ? 'overflow-y-hidden h-[100dvh]' : ''}`}>
+//                     {/*<div className="logo text-xl font-bold text-indigo-400 ">SMN</div>*/}
+//                     <div className="logo text-xl font-bold bg-gradient-to-br from-indigo-500  to-indigo-600 bg-clip-text text-transparent ">SMN</div>
+//
+//                     <TiThMenu className="visible md:hidden h-6 w-6 cursor-pointer" ref={menuRef}  />
+//
+//                     <div
+//                         className="nav-links xl:[25%] w-[60%]  hidden md:flex items-center justify-evenly  px-1 gap-5 xl:gap-0  mx-3 min-h-fit min-w-fit font-medium lg:mx-5 xl:mx-10">
+//                         <button  onClick={()=>{handleScrollToSection("home")}} className="nav-comp linkEffect  linkEffect--rightToLeft ">Home</button>
+//                         <button  onClick={()=>{handleScrollToSection("about")}} className="nav-comp linkEffect  linkEffect--rightToLeft">About Me</button>
+//                         <button  onClick={()=>{handleScrollToSection("education")}} className="nav-comp linkEffect  linkEffect--rightToLeft">Education</button>
+//                         <button  onClick={()=>{handleScrollToSection("skills")}} className="nav-comp linkEffect  linkEffect--rightToLeft">Skills</button>
+//                         <button onClick={()=>{handleScrollToSection("projects")}}  className="nav-comp linkEffect  linkEffect--rightToLeft">Projects</button>
+//                         <button  onClick={()=>{handleScrollToSection("contact")}} className="nav-comp linkEffect  linkEffect--rightToLeft">Contact Me</button>
+//                         {/*<button className="bg-[#de7595] text-black p-1.5 rounded-lg font-semibold">Download CV</button>*/}
+//
+//
+//                         <a href="/assets/Shaik_Mohammed_Noushad_Resume.pdf" download>
+//                             <button
+//                                 className="nav-comp bg-indigo-500 text-black p-1.5 px-2 min-w-fit text-sm flex flex-wrap md:rounded-lg md:font-semibold cursor-pointer">Download
+//                                 CV
+//                             </button>
+//                         </a>
+//
+//                         <button onClick={()=>{setDarkMode(!darkMode)}}
+//                                 className={`nav-comp mode-btn py-2 px-3 cursor-pointer rounded-lg border-[1px] border-slate-700`}>
+//                             <MdOutlineDarkMode className={`h-5 w-5 ${darkMode ? "hidden": "block"}`} />
+//                             <BsBrightnessHigh className={`h-5 w-5 ${darkMode ? "block": "hidden"}`}/>
+//                         </button>
+//                     </div>
+//
+//                     {/*<div className={`aside ${darkMode ? "text-white border-l-2 border-l-white": "text-black border-l-2 border-l-black"}`} >*/}
+//
+//                     {toggleSidebar && (
+//                         <div className={`aside top-0 right-[-100%] h-[100dvh] w-[55%] ${darkMode ? "bg-black" : "bg-white"} z-[99]`}>
+//                         <div className="close ">  <IoClose ref={closeRef} className="close-i cursor-pointer h-6 w-6" /></div>
+//                         <button onClick={()=>{handleSideLinkClick("home")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Home</button>
+//                         <button onClick={()=>{handleSideLinkClick("about")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">About Me</button>
+//                         <button onClick={()=>{handleSideLinkClick("education")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Education</button>
+//                         <button onClick={()=>{handleSideLinkClick("skills")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Skills</button>
+//                         <button onClick={()=>{handleSideLinkClick("projects")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Projects</button>
+//                         <button onClick={()=>{handleSideLinkClick("contact")}} className="sidebar linkEffect1  linkEffect--rightToLeft1">Contact Me</button>
+//                         <a href="/assets/Shaik_Mohammed_Noushad_Resume.pdf" className="aside-cvBtn sidebar linkEffect1  linkEffect--rightToLeft1" download>
+//                             <button
+//                                 className="nav-comp bg-indigo-500 text-black p-1.5 px-2 min-w-fit text-sm flex flex-wrap rounded-lg cursor-pointer">Download
+//                                 CV
+//                             </button>
+//                         </a>
+//                         <button className="aside-modeBtn sidebar linkEffect1  linkEffect--rightToLeft1" onClick={()=>{setDarkMode(!darkMode)}}>
+//                             <div   className="nav-comp  p-2 py-2 min-w-fit w-[100px] simple-center cursor-pointer rounded-lg border-[1px] border-slate-700">
+//                                 <MdOutlineDarkMode className={`h-5 w-5 ${darkMode ? "hidden": "block"}`} />
+//                                 <BsBrightnessHigh className={`h-5 w-5 ${darkMode ? "block": "hidden"}`}/>
+//                             </div>
+//                         </button>
+//                         </div>
+//                         )}
+//                 </div>
+//             </div>
+//         </>
+//     );
+// };
+//
+// export default Navbar;
